@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $actual_cause = mysqli_real_escape_string($db, $_POST['actual_cause']);
     $name = $_FILES['death_document']['name'];
     $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/uploads/deaths/";
-    $target_file = $target_dir . time() . $name;
+    $target_file = $target_dir . time() . "_death_document_" . $name;
     move_uploaded_file($_FILES['death_document']['tmp_name'], $target_file);
     $sql = "INSERT INTO DEATH_REG (
         user_id, 

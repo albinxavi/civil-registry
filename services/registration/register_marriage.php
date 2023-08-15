@@ -34,15 +34,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     move_uploaded_file($_FILES['bride_signature']['tmp_name'], $bride_signature_target_file);
 
     $bride_photo_file_name = $_FILES['bride_photo']['name'];
-    $bride_photo_target_file = $target_dir . time() . $bride_photo_file_name;
+    $bride_photo_target_file = $target_dir . time() . "_bride_photo_" . $bride_photo_file_name;
     move_uploaded_file($_FILES['bride_photo']['tmp_name'], $bride_photo_target_file);
 
     $bride_groom_signature_file_name = $_FILES['bride_groom_signature']['name'];
-    $bride_groom_signature_target_file = $target_dir . time() . $bride_groom_signature_file_name;
+    $bride_groom_signature_target_file = $target_dir . time() . "_bride_groom_signature_" . $bride_groom_signature_file_name;
     move_uploaded_file($_FILES['bride_groom_signature']['tmp_name'], $bride_groom_signature_target_file);
 
     $bride_groom_photo_file_name = $_FILES['bride_groom_photo']['name'];
-    $bride_groom_photo_target_file = $target_dir . time() . $bride_groom_photo_file_name;
+    $bride_groom_photo_target_file = $target_dir . time() . "_bride_groom_photo_" . $bride_groom_photo_file_name;
     move_uploaded_file($_FILES['bride_groom_photo']['tmp_name'], $bride_groom_photo_target_file);
     
     $sql = "INSERT INTO marriage_reg (
