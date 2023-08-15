@@ -55,7 +55,7 @@ include('services/user/session.php');
 				
             <div style = "width:80%; margin:5%">
                
-               <form action = "services/registration/register_marriage.php" method = "post">
+               <form action = "services/registration/register_marriage.php" method = "post" enctype="multipart/form-data">
                <div style="display: flex;">
                     <div style="margin-right:20px ;">
                         
@@ -70,7 +70,7 @@ include('services/user/session.php');
                                          <label>City  :</label><input type = "text" name = "bride_city" class = "box" /><br/><br/>
                                          <label>District  :</label><input type = "text" name = "bride_district" class = "box" /><br/><br/>
                                          <label>State  :</label><input type = "text" name = "bride_state" class = "box" /><br/><br/>
-                                         <label>Contry  :</label><input type = "text" name = "bride_contry" class = "box" /><br/><br/>
+                                         <label>Contry  :</label><input type = "text" name = "bride_country" class = "box" /><br/><br/>
                                          <label>Phone number  :</label><input type = "text"pattern="[6-9]{1}[0-9]{9}" name = "bride_phno" class = "box" /><br/><br/>
                                          <label>Email  :</label><input type = "email" name = "bride_email" class = "box" /><br/><br/>
                                          <label>Signature  :</label><input type="file" id="myFile" name="bride_signature"><br/><br/>
@@ -93,8 +93,8 @@ include('services/user/session.php');
                                       <label>City :</label><input type = "text" name = "bride_groom_city" class = "box" /><br/><br/>
                                       <label>District :</label><input type = "text" name = "bride_groom_district" class = "box" /><br/><br/>
                                       <label>State :</label><input type = "text" name = "bride_groom_state" class = "box" /><br/><br/>
-                                      <label>Contry :</label><input type = "text" name = "bride_groom_contry" class = "box" /><br/><br/>
-                                      <label>Phone number:</label><input type = "text"pattern="[6-9]{1}[0-9]{9} name = "bride_groom_phno" class = "box" /><br/><br/>
+                                      <label>Contry :</label><input type = "text" name = "bride_groom_country" class = "box" /><br/><br/>
+                                      <label>Phone number:</label><input type = "text"pattern="[6-9]{1}[0-9]{9}" name = "bride_groom_phno" class = "box" /><br/><br/>
                                       <label>Email:</label><input type = "email" name = "bride_groom_email" class = "box" /><br/><br/>
                                       <label>Signature  :</label><input type="file" id="myFile" name="bride_groom_signature"><br/><br/>
                                       <label>Photo  :</label><input type="file" id="myFile" name="bride_groom_photo">
