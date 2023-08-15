@@ -59,7 +59,7 @@ include('services/user/session.php');
                <div style="display: flex;">
                     <div style="margin-right:20px ;">
                         
-                              <label>User ID  :</label><input  type = "text" <input readonly type="text" value=<?php echo $_SESSION['id']; ?> name = "user_id" class = "box"/><br /><br/>
+                              <label>User ID  :</label><input readonly type="text" value=<?php echo $_SESSION['id']; ?> name = "user_id" class = "box"/><br /><br/>
                               <label>Date of Marriage  :</label><input type = "date" name = "date_of_marriage" class = "box" /><br/><br/><br>
                               <div style="border: solid 1px; width:80%; margin: 10px; color:#333333; width:300px;">
                                 <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Bride detail</b></div>
@@ -82,7 +82,7 @@ include('services/user/session.php');
                     </div>
                         
                           <div style="margin-left: 20px;">
-                                    <label>Proof of marriage  :</label><input type="file"/><br /><br/>
+                                    <label>Proof of marriage  :</label><input type="file" name="proof"/><br /><br/>
                                      <label>Place of Marriage  :</label><input type = "text" name = "place_of_marriage" class = "box" /><br/><br><br>
                                     <div style="border: solid 1px; width:80%; margin: 10px; color:#333333; width:300px;">
                                      <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Bride/Groom detail</b></div>
