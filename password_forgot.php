@@ -1,7 +1,7 @@
 <html>
    
    <head>
-      <title>Forgot password</title>
+   <title>Civil Registry</title>
       <link rel="stylesheet" href="./style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
       
@@ -51,7 +51,7 @@
                   </select><br /><br/>
                  <label>Answer  :</label><input type = "text" name = "security_answer" class = "box"/><br /><br/>
 
-                  <div align = "center"><input type = "submit" value = " Submit " disabled/> <button type="reset">Reset</button></div><br><br>
+                  <div align = "center"><input type = "submit" value = " Submit "/> <button type="reset">Reset</button></div><br><br>
                </form>
                
                <div style = "font-size:11px; color:#cc0000; margin-top:10px">

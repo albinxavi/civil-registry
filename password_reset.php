@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Reset password</title>
+  <title>Civil Registry</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
@@ -38,7 +38,8 @@
         <div style="width: 80%; margin: 10%">
           <form action="Reset.php" method="post">
             <label>New Password :</label><input type="password" id="new_password" name="new_password" class="box" /><br /><br />
-            <label>Confirm Password :</label><input type="password" id="confirm_password" name="confirm_password" class="box" /><br /><br />
+            <label>Confirm Password :</label
+            ><input type="password" id="confirm_password" name="confirm_password" onkeyup="checkPasswordMatch();" class="box" /><br /><br />
 
             <div align="center"><input type="submit" id="submit" value=" Submit " disabled /> <button type="reset">Reset</button></div>
             <br /><br />
@@ -51,7 +52,6 @@
   </body>
   <script>
     function checkPasswordMatch() {
-      console.log("test");
       var password = document.getElementById("new_password").value;
       var confirm_password = document.getElementById("confirm_password").value;
       var submitButton = document.getElementById("submit");
