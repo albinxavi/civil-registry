@@ -27,26 +27,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bride_groom_phno = mysqli_real_escape_string($db, $_POST['bride_groom_phno']);
     $bride_groom_email = mysqli_real_escape_string($db, $_POST['bride_groom_email']);
 
-    $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/uploads/marriages/";
+    $base_dir = "/uploads/marriages/";
+    $target_dir = $_SERVER['DOCUMENT_ROOT'] . $base_dir;
 
     $bride_signature_file_name = $_FILES['bride_signature']['name'];
-    $bride_signature_target_file = $target_dir . time() . $bride_signature_file_name;
+    $t = time();
+    $bride_signature_target_file = $target_dir . $t . "_bride_signature_" . $bride_signature_file_name;
+    $bride_signature_web_location = $base_dir . $t . "_bride_signature_" . $bride_signature_file_name;
     move_uploaded_file($_FILES['bride_signature']['tmp_name'], $bride_signature_target_file);
 
     $bride_photo_file_name = $_FILES['bride_photo']['name'];
-    $bride_photo_target_file = $target_dir . time() . "_bride_photo_" . $bride_photo_file_name;
+    $t = time();
+    $bride_photo_target_file = $target_dir . $t . "_bride_photo_" . $bride_photo_file_name;
+    $bride_photo_web_location = $base_dir . $t . "_bride_photo_" . $bride_photo_file_name;
     move_uploaded_file($_FILES['bride_photo']['tmp_name'], $bride_photo_target_file);
 
     $bride_groom_signature_file_name = $_FILES['bride_groom_signature']['name'];
-    $bride_groom_signature_target_file = $target_dir . time() . "_bride_groom_signature_" . $bride_groom_signature_file_name;
+    $t = time();
+    $bride_groom_signature_target_file = $target_dir . $t . "_bride_groom_signature_" . $bride_groom_signature_file_name;
+    $bride_groom_signature_web_location = $base_dir . $t . "_bride_groom_signature_" . $bride_groom_signature_file_name;
     move_uploaded_file($_FILES['bride_groom_signature']['tmp_name'], $bride_groom_signature_target_file);
 
     $bride_groom_photo_file_name = $_FILES['bride_groom_photo']['name'];
-    $bride_groom_photo_target_file = $target_dir . time() . "_bride_groom_photo_" . $bride_groom_photo_file_name;
+    $t = time();
+    $bride_groom_photo_target_file = $target_dir . $t . "_bride_groom_photo_" . $bride_groom_photo_file_name;
+    $bride_groom_signature_web_location = $base_dir . $t . "_bride_groom_photo_" . $bride_groom_photo_file_name;
     move_uploaded_file($_FILES['bride_groom_photo']['tmp_name'], $bride_groom_photo_target_file);
 
     $proof_file_name = $_FILES['proof']['name'];
-    $proof_target_file = $target_dir . time() . "_proof_" . $proof_file_name;
+    $t = time();
+    $proof_target_file = $target_dir . $t . "_proof_" . $proof_file_name;
+    $proof_web_location = $base_dir . $t . "_proof_" . $proof_file_name;
     move_uploaded_file($_FILES['proof']['tmp_name'], $proof_target_file);
     
     $sql = "INSERT INTO marriage_reg (
@@ -87,8 +98,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         '$bride_country', 
         '$bride_phno', 
         '$bride_email',
-        '$bride_signature_target_file',
-        '$bride_photo_target_file',
+        '$bride_signature_web_location',
+        '$bride_photo_web_location',
         '$bride_groom_name', 
         '$bride_groom_dob', 
         '$bride_groom_housename', 
@@ -98,9 +109,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         '$bride_groom_country', 
         '$bride_groom_phno', 
         '$bride_groom_email',
-        '$bride_groom_signature_target_file',
-        '$bride_groom_photo_target_file',
-        '$proof_target_file'
+        '$bride_groom_signature_web_location',
+        '$bride_groom_photo_web_location',
+        '$proof_web_location'
     );";
     if (mysqli_query($db, $sql)) {
         $args = array(

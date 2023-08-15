@@ -20,11 +20,13 @@
       $birth_state = mysqli_real_escape_string($db,$_POST['birth_state']);
       $delivery_method = mysqli_real_escape_string($db,$_POST['delivery_method']);
       $name = $_FILES['birth_proof']['name'];
-      $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/uploads/births/";
-      $target_file = $target_dir.basename($_FILES['birth_proof']['name']);
-      $target_file = $target_dir . time() . "_birth_proof_" . $name;
+      $base_dir = "/uploads/births/";
+      $target_dir = $_SERVER['DOCUMENT_ROOT'] . $base_dir;
+      $t = time();
+      $target_file = $target_dir . $t . "_birth_proof_" . $name;
+      $web_location = $base_dir . $t . "_birth_proof_" . $name;
       move_uploaded_file($_FILES['birth_proof']['tmp_name'], $target_file);
-      $sql = "INSERT into birth_reg (user_id, dob, child_name, child_sex, place_of_birth, birth_weight, mother_name, mother_age, father_name, father_age, birth_housename, birth_city, birth_district, birth_state, delivery_method, birth_proof) VALUES ('$user_id', '$dob', '$child_name', '$child_sex', '$place_of_birth', '$birth_weight', '$mother_name', '$mother_age', '$father_name', '$father_age', '$birth_housename', '$birth_city', '$birth_district', '$birth_state', '$delivery_method', '$target_file')";
+      $sql = "INSERT into birth_reg (user_id, dob, child_name, child_sex, place_of_birth, birth_weight, mother_name, mother_age, father_name, father_age, birth_housename, birth_city, birth_district, birth_state, delivery_method, birth_proof) VALUES ('$user_id', '$dob', '$child_name', '$child_sex', '$place_of_birth', '$birth_weight', '$mother_name', '$mother_age', '$father_name', '$father_age', '$birth_housename', '$birth_city', '$birth_district', '$birth_state', '$delivery_method', '$web_location')";
       if (mysqli_query($db, $sql)) {
          $args = array(
             'register_birth' => 'success'
