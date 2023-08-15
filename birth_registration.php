@@ -29,7 +29,7 @@
    
    <body bgcolor = "#FFFFFF">
     <nav>
-        <div class="menu">
+    <div class="menu">
           <div class="logo">
           <a href="/home.php">Civil Registry</a>
           </div>

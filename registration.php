@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="./style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
+<<<<<<< HEAD
+=======
     <style type="text/css">
       body {
         font-family: Arial, Helvetica, sans-serif;
@@ -20,6 +22,7 @@
       }
     </style>
   </head>
+>>>>>>> development
 
   <body bgcolor="#FFFFFF">
     <nav>
@@ -41,18 +44,17 @@
             <label>Name :</label><input type="text" name="name" class="box" /><br /><br />
             <label>Phone Number :</label><input type="text" name="phone" class="box" /><br /><br />
 
-            <label>Password :</label><input type="password" name="password" id="password" class="box" /><br /><br />
-            <label>Confirm Password :</label><input type="password" name="confirm_password" id="confirm_password" class="box" onkeyup="checkPasswordMatch();" /><br /><br />
-            <label>Security Question :</label
-            ><select name="security_qn">
-              <option value="" disabled selected hidden>Choose Security Question</option>
-              <option value="">What was your favorite sport in high school?</option>
-              <option value="">What was the name of your first childhood friend?</option>
-              <option value="">What color do you like the most?</option>
-              <option value="">Which teacher did you like the most at school?</option>
-              <option value="">What sport do you prefer the most?</option></select
-            ><br /><br />
-            <label>Answer :</label><input type="text" name="security_answer" class="box" /><br /><br />
+            <label>Password :</label><input type = "password" name = "password" class = "box"/><br /><br/>
+                  <label>Confirm Password  :</label><input type = "password" name = "confirm_password" class = "box" onchange="checkpassword"/><br /><br/>
+                  <label>Security Question  :</label><select name="security_qn">
+                     <option value="" disabled selected hidden>Choose Security Question </option>
+                     <option value="What was your favorite sport in high school?">What was your favorite sport in high school?</option>
+                     <option value="What was the name of your first childhood friend?">What was the name of your first childhood friend?</option>
+                     <option value="What color do you like the most?">What color do you like the most?</option>
+                     <option value="Which teacher did you like the most at school?">Which teacher did you like the most at school?</option>
+                     <option value="What sport do you prefer the most?">What sport do you prefer the most?</option>
+                   </select><br /><br/>
+                  <label>Answer  :</label><input type = "text" name = "security_answer" class = "box"/><br /><br/>
 
             <div align="center"><input type="submit" id="submit" value=" Submit " disabled /> <button type="reset">Reset</button></div>
             <br /><br />

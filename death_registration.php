@@ -30,13 +30,13 @@ include('services/user/session.php');
 
 <body bgcolor="#FFFFFF">
    <nav>
-      <div class="menu">
-         <div class="logo">
-            <a href="/home.php">Civil Registry</a>
-         </div>
-
-         <ul>
-         <label style="color: aliceblue;">
+   <div class="menu">
+          <div class="logo">
+          <a href="/home.php">Civil Registry</a>
+          </div>
+          
+          <ul>
+          <label style="color: aliceblue;">
                <?php
                if ($_SESSION['admin'] == 1) {
                   echo $_SESSION['name'] . "(Admin)";
@@ -45,9 +45,9 @@ include('services/user/session.php');
                }
                ?>
             </label>
-            <li><a href="services/user/logout.php">Logout</a></li>
-         </ul>
-      </div>
+              <li><a href="services/user/logout.php">Logout</a></li>
+            </ul>
+        </div>
    </nav><br><br><br><br><br>
 
 
