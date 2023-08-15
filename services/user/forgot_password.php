@@ -5,25 +5,25 @@
       // username and password sent from form 
       
       $email = mysqli_real_escape_string($db,$_POST['email']);
-      $password = mysqli_real_escape_string($db,$_POST['password']);
       $security_qn = mysqli_real_escape_string($db,$_POST['security_qn']);
       $security_answer = mysqli_real_escape_string($db,$_POST['security_answer']);
-      $sql = "SELECT * FROM USER WHERE email = '$email' and password = '$password'";
+      $sql = "SELECT * FROM USER WHERE email = '$email' and security_qn = '$security_qn' and security_answer = '$security_answer'";
       $result = mysqli_query($db,$sql);
       if (mysqli_num_rows($result)==1)
-      // If result matched $myusername and $mypassword, table row must be 1 row
       {
          $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-         $_SESSION['login_user'] = $email;
-         $_SESSION['admin'] = $row['admin'];
-         $_SESSION['id'] = $row['id'];
-         $_SESSION['name'] = $row['name'];
-         header("location: /home.php");
+         $id = $row['id'];
+         $args = array(
+            'email' => $email,
+            'id' => $id,
+            'forgot_password' => 'success'
+        );
+        header("Location: /password_reset.php?" . http_build_query($args));
       }else {
         $args = array(
-            'login' => 'failed'
+            'forgot_password' => 'failed'
         );
-        header("Location: /?" . http_build_query($args));
+        header("Location: /password_forgot.php?" . http_build_query($args));
         
       }
    }

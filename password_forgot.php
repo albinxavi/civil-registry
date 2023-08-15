@@ -27,7 +27,7 @@
     <nav>
         <div class="menu">
           <div class="logo">
-            <a href="#">Civil Registry</a>
+          <a href="/home.php">Civil Registry</a>
           </div>
           
         </div>
@@ -39,7 +39,7 @@
 				
             <div style = "width:80%;margin:10%">
                
-               <form action = "Forgot.php" method = "post">
+               <form action = "services/user/forgot_password.php" method = "post">
                   <label>Email   :</label><input type = "text" name = "email" class = "box"/><br /><br/>
                   <label>Security Question  :</label><select name="security_qn">
                     <option value="" disabled selected hidden>Choose Security Question </option>
@@ -51,10 +51,17 @@
                   </select><br /><br/>
                  <label>Answer  :</label><input type = "text" name = "security_answer" class = "box"/><br /><br/>
 
-                  <div align = "center"><input type = "submit" value = " Submit "/> <button type="reset">Reset</button></div><br><br>
+                  <div align = "center"><input type = "submit" value = " Submit "/> <button type="reset">Reset</button></div><br>
                </form>
-               
                <div style = "font-size:11px; color:#cc0000; margin-top:10px">
+               <?php
+               if (isset($_GET['forgot_password'])){
+               if($_GET['forgot_password']=='failed'){
+                echo "Security Checks Failed. Please Try Again.";
+               }
+
+               }
+               ?>
             </div>
 					
             </div>

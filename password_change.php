@@ -25,7 +25,7 @@
     <nav>
       <div class="menu">
         <div class="logo">
-          <a href="#">Civil Registry</a>
+        <a href="/home.php">Civil Registry</a>
         </div>
       </div>
     </nav>
