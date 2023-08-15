@@ -1,5 +1,5 @@
 <?php
-   include($_SERVER['DOCUMENT_ROOT']."\inc\config.php");
+   include($_SERVER['DOCUMENT_ROOT']."/inc/config.php");
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
