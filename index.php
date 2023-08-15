@@ -23,7 +23,7 @@
     <nav>
       <div class="menu">
         <div class="logo">
-          <a href="">Civil Registry</a>
+        <a href="/home.php">Civil Registry</a>
         </div>
       </div>
     </nav>
@@ -39,6 +39,7 @@
             <div align="center"><input type="submit" value=" Submit " /><br /></div>
           </form>
           <div align="center"><a href="registration.php">New User? Register Now</a></div>
+          <div align="center"><a href="password_forgot.php">Forgot Password?</a></div>
 
           <div style="font-size: 11px; color: #cc0000; margin-top: 10px">
             <?php
@@ -51,11 +52,20 @@
                      echo "User Registration Failed.";
                   }
                }
-               if (isset($_GET['login']))
+               elseif (isset($_GET['login']))
                {
                   if($_GET['login']=='failed'){
-                     echo "Your Username or Password is invalid.";
+                     echo "Your Username or Password is Invalid.";
                   }
+               }
+               elseif (isset($_GET['reset'])){
+               if($_GET['reset']=='success'){
+                echo "Password Reset Successfully. Please Login with Your New Credentials.";
+               }
+               elseif($_GET['reset']=='failed'){
+                echo "An Error Occured While Restting Password. Please Contact the Support Team.";
+               }
+
                }
                ?>
           </div>

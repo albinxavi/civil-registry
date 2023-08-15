@@ -25,7 +25,7 @@
     <nav>
       <div class="menu">
         <div class="logo">
-          <a href="#">Civil Registry</a>
+        <a href="/home.php">Civil Registry</a>
         </div>
       </div>
     </nav>
@@ -36,11 +36,14 @@
         <div style="background-color: #333333; color: #ffffff; padding: 3px"><b>Reset Password</b></div>
 
         <div style="width: 80%; margin: 10%">
-          <form action="Reset.php" method="post">
+          <form action="services/user/reset_password.php" method="post">
             <label>New Password :</label><input type="password" id="new_password" name="new_password" class="box" /><br /><br />
             <label>Confirm Password :</label
             ><input type="password" id="confirm_password" name="confirm_password" onkeyup="checkPasswordMatch();" class="box" /><br /><br />
-
+            <?php
+            $id=$_GET['id'];
+            echo "<input type=hidden value='$id' name='id'>"
+            ?>
             <div align="center"><input type="submit" id="submit" value=" Submit " disabled /> <button type="reset">Reset</button></div>
             <br /><br />
           </form>
