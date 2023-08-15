@@ -57,11 +57,11 @@
                   <label>Confirm Password  :</label><input type = "password" name = "confirm_password" class = "box" onchange="checkpassword"/><br /><br/>
                   <label>Security Question  :</label><select name="security_qn">
                      <option value="" disabled selected hidden>Choose Security Question </option>
-                     <option value="">What was your favorite sport in high school? </option>
-                     <option value="">What was the name of your first childhood friend?</option>
-                     <option value="">What color do you like the most?</option>
-                     <option value="">Which teacher did you like the most at school?</option>
-                     <option value="">What sport do you prefer the most?</option>
+                     <option value="What was your favorite sport in high school?">What was your favorite sport in high school?</option>
+                     <option value="What was the name of your first childhood friend?">What was the name of your first childhood friend?</option>
+                     <option value="What color do you like the most?">What color do you like the most?</option>
+                     <option value="Which teacher did you like the most at school?">Which teacher did you like the most at school?</option>
+                     <option value="What sport do you prefer the most?">What sport do you prefer the most?</option>
                    </select><br /><br/>
                   <label>Answer  :</label><input type = "text" name = "security_answer" class = "box"/><br /><br/>
 
