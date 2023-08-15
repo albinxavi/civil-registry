@@ -5,20 +5,28 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $user_id = mysqli_real_escape_string($db, $_POST['user_id']);
-    $deceased_name = mysqli_real_escape_string($db, $_POST['deceased_name']);
-    $deceased_sex = mysqli_real_escape_string($db, $_POST['deceased_sex']);
-    $deceased_age = mysqli_real_escape_string($db, $_POST['deceased_age']);
-    $deceased_housename = mysqli_real_escape_string($db, $_POST['deceased_housename']);
-    $deceased_city = mysqli_real_escape_string($db, $_POST['deceased_city']);
-    $deceased_district = mysqli_real_escape_string($db, $_POST['deceased_district']);
-    $deceased_state = mysqli_real_escape_string($db, $_POST['deceased_state']);
-    $deceased_country = mysqli_real_escape_string($db, $_POST['deceased_country']);
-    $deceased_pin = mysqli_real_escape_string($db, $_POST['deceased_pin']);
-    $father_name = mysqli_real_escape_string($db, $_POST['father_name']);
-    $mother_name = mysqli_real_escape_string($db, $_POST['mother_name']);
-    $place_of_death = mysqli_real_escape_string($db, $_POST['place_of_death']);
-    $cause_certificate_id = mysqli_real_escape_string($db, $_POST['cause_certificate_id']);
-    $actual_cause = mysqli_real_escape_string($db, $_POST['actual_cause']);
+    $date_of_marriage = mysqli_real_escape_string($db, $_POST['date_of_marriage']);
+
+    $bride_name = mysqli_real_escape_string($db, $_POST['bride_name']);
+    $bride_dob = mysqli_real_escape_string($db, $_POST['bride_dob']);
+    $bride_housename = mysqli_real_escape_string($db, $_POST['bride_housename']);
+    $bride_city = mysqli_real_escape_string($db, $_POST['bride_city']);
+    $bride_district = mysqli_real_escape_string($db, $_POST['bride_district']);
+    $bride_state = mysqli_real_escape_string($db, $_POST['bride_state']);
+    $bride_contry = mysqli_real_escape_string($db, $_POST['bride_contry']);
+    $bride_phno = mysqli_real_escape_string($db, $_POST['bride_phno']);
+    $bride_email = mysqli_real_escape_string($db, $_POST['bride_email']);
+
+    $bride_groom_name = mysqli_real_escape_string($db, $_POST['bride_groom_name']);
+    $bride_groom_dob = mysqli_real_escape_string($db, $_POST['bride_groom_dob']);
+    $bride_housename = mysqli_real_escape_string($db, $_POST['bride_housename']);
+    $bride_city = mysqli_real_escape_string($db, $_POST['bride_city']);
+    $bride_district = mysqli_real_escape_string($db, $_POST['bride_district']);
+    $bride_state = mysqli_real_escape_string($db, $_POST['bride_state']);
+    $bride_contry = mysqli_real_escape_string($db, $_POST['bride_contry']);
+    $bride_phno = mysqli_real_escape_string($db, $_POST['bride_phno']);
+    $bride_email = mysqli_real_escape_string($db, $_POST['bride_email']);
+
     $name = $_FILES['death_document']['name'];
     $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/uploads/deaths/";
     $target_file = $target_dir . basename($_FILES['death_document']['name']);

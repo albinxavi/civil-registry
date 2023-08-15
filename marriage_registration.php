@@ -71,7 +71,7 @@ include('services/user/session.php');
                                          <label>District  :</label><input type = "text" name = "bride_district" class = "box" /><br/><br/>
                                          <label>State  :</label><input type = "text" name = "bride_state" class = "box" /><br/><br/>
                                          <label>Contry  :</label><input type = "text" name = "bride_contry" class = "box" /><br/><br/>
-                                         <label>Phone number  :</label><input type = "text"pattern="[6-9]{1}[0-9]{9} name = "bride_phno" class = "box" /><br/><br/>
+                                         <label>Phone number  :</label><input type = "text"pattern="[6-9]{1}[0-9]{9}" name = "bride_phno" class = "box" /><br/><br/>
                                          <label>Email  :</label><input type = "email" name = "bride_email" class = "box" /><br/><br/>
                                          <label>Signature  :</label><input type="file" id="myFile" name="bride_signature"><br/><br/>
                                         <label>Photo  :</label><input type="file" id="myFile" name="bride_photo">
