@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Login Page</title>
+  <title>Civil Registry</title>
     <link rel="stylesheet" href="./style.css" />
     <style type="text/css">
       body {
