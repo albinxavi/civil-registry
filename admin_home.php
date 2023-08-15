@@ -17,13 +17,17 @@ include('services/user/session.php');
    <nav>
       <div class="menu">
          <div class="logo">
-            <a href="/home.php">Civil Registry</a>
+            <a href="/admin_home.php">Civil Registry</a>
          </div>
 
          <ul>
             <label style="color: aliceblue;">
                <?php
+               if ($_SESSION['admin'] == 1) {
+                  echo $_SESSION['name']."<br>(Admin)";
+               } else {
                   echo $_SESSION['name'];
+               }
                ?>
             </label>
             <li><a href="services/user/logout.php">Logout</a></li>
@@ -34,9 +38,9 @@ include('services/user/session.php');
    <div class="center">
       <div class="title">Services</div>
       <div class="btns">
-         <a href="marriage_registration.php" style="text-decoration:none;"><button>Marriage Registration</button></a>
-         <a href="birth_registration.php" style="text-decoration:none;"><button>Birth Registration</button></a>
-         <a href="death_registration.php" style="text-decoration:none;"><button>Death Registration</button></a>
+         <a href="marriages_view.php" style="text-decoration:none;"><button>Marriage Registration</button></a>
+         <a href="births_view.php" style="text-decoration:none;"><button>Birth Registration</button></a>
+         <a href="deaths_view.php" style="text-decoration:none;"><button>Death Registration</button></a>
       </div>
    </div>
 </body>
