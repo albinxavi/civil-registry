@@ -4,12 +4,13 @@
    
    $user_check = $_SESSION['login_user'];
    
-   $ses_sql = mysqli_query($db,"select * from USER where email = '$user_check' ");
-   
-   $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
-   
-   $login_session = $row['email'];
-    if(!isset($_SESSION['login_user'])){
+   $result = mysqli_query($db,"select * from USER where email = '$user_check' ");
+   if (mysqli_num_rows($result) != 1)
+   {
+      header("location: /services/user/logout.php");
+      die();
+   }
+   if(!isset($_SESSION['login_user'])){
       header("location: /");
       die();
    }
