@@ -36,7 +36,15 @@ include('services/user/session.php');
          </div>
 
          <ul>
-            <label hidden style="color: aliceblue;">(Admin)</label>
+         <label style="color: aliceblue;">
+               <?php
+               if ($_SESSION['admin'] == 1) {
+                  echo $_SESSION['name'] . "(Admin)";
+               } else {
+                  echo $_SESSION['name'];
+               }
+               ?>
+            </label>
             <li><a href="services/user/logout.php">Logout</a></li>
          </ul>
       </div>
@@ -57,11 +65,11 @@ include('services/user/session.php');
                         name="user_id" class="box" /><br /><br />
 
                      <label>Deceased Name :</label><input type="text" name="deceased_name" class="box" /><br /><br />
-                     <label>Deceased Sex :<input type="radio" id="male" name="deceased_sex">
+                     <label>Deceased Sex :<input type="radio" id="male" name="deceased_sex" value="F">
                         <label for="male">Male</label>
-                        <input type="radio" id="female" name="deceased_sex">
+                        <input type="radio" id="female" name="deceased_sex" value="F">
                         <label for="female">Female</label>
-                        <input type="radio" id="others" name="deceased_sex">
+                        <input type="radio" id="others" name="deceased_sex" value="O">
                         <label for="others">Others</label><br><br>
                         <label>Deceased Age :</label><input type="number" min="1" max="200" name="deceased_age"
                            class="box" /><br /><br />

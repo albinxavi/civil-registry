@@ -35,7 +35,15 @@
           </div>
           
           <ul>
-              <label hidden style="color: aliceblue;">(Admin)</label>
+          <label style="color: aliceblue;">
+               <?php
+               if ($_SESSION['admin'] == 1) {
+                  echo $_SESSION['name'] . "(Admin)";
+               } else {
+                  echo $_SESSION['name'];
+               }
+               ?>
+            </label>
               <li><a href="services/user/logout.php">Logout</a></li>
             </ul>
         </div>

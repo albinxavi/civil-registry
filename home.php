@@ -38,7 +38,7 @@ include('services/user/session.php');
    <div class="center">
       <div class="title">Services</div>
       <div class="btns">
-         <button>Marriage Registration</button>
+         <a href="marriage_registration.php" style="text-decoration:none;"><button>Marriage Registration</button></a>
          <a href="birth_registration.php" style="text-decoration:none;"><button>Birth Registration</button></a>
          <a href="death_registration.php" style="text-decoration:none;"><button>Death Registration</button></a>
       </div>
