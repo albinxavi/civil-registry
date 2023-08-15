@@ -44,6 +44,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bride_groom_photo_file_name = $_FILES['bride_groom_photo']['name'];
     $bride_groom_photo_target_file = $target_dir . time() . "_bride_groom_photo_" . $bride_groom_photo_file_name;
     move_uploaded_file($_FILES['bride_groom_photo']['tmp_name'], $bride_groom_photo_target_file);
+
+    $proof_file_name = $_FILES['proof']['name'];
+    $proof_target_file = $target_dir . time() . "_proof_" . $proof_file_name;
+    move_uploaded_file($_FILES['proof']['tmp_name'], $proof_target_file);
     
     $sql = "INSERT INTO marriage_reg (
         user_id,
@@ -69,7 +73,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         bride_groom_phno, 
         bride_groom_email,
         bride_groom_signature,
-        bride_groom_photo
+        bride_groom_photo,
+        proof
     ) VALUES (
         '$user_id', 
         '$date_of_marriage', 
@@ -94,7 +99,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         '$bride_groom_phno', 
         '$bride_groom_email',
         '$bride_groom_signature_target_file',
-        '$bride_groom_photo_target_file'
+        '$bride_groom_photo_target_file',
+        '$proof_target_file'
     );";
     if (mysqli_query($db, $sql)) {
         $args = array(
