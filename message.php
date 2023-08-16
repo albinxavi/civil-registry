@@ -32,7 +32,16 @@ include('services/user/session.php');
 
 
           <div style="font-size: 20px; color: #00000; margin-top: 10px">
-          Registration Successful. Redirecting in <span id="timer">3</span> seconds.
+          <?php
+          if($_GET['register_marriage']=='success'||$_GET['register_death']=='success'||$_GET['register_birth']=='success')
+          {
+            echo "Registration Successful. ";
+          }
+          else{
+            echo "Uh. Oh! Looks Like You are Lost. ";
+          }
+          ?>
+          Redirecting in <span id="timer">3</span> seconds.
           </div>
         </div>
       </div>
