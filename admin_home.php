@@ -41,6 +41,7 @@ include('services/user/session.php');
          <a href="marriages_view.php" style="text-decoration:none;"><button>Marriage Registration</button></a>
          <a href="births_view.php" style="text-decoration:none;"><button>Birth Registration</button></a>
          <a href="deaths_view.php" style="text-decoration:none;"><button>Death Registration</button></a>
+         <a href="users_view.php" style="text-decoration:none;"><button>Death Registration</button></a>
       </div>
    </div>
 </body>

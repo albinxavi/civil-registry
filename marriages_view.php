@@ -37,15 +37,12 @@ include('services/user/session.php');
 
 </head>
 
-
-
 <body bgcolor="#FFFFFF">
     <nav>
         <div class="menu">
             <div class="logo">
                 <a href="/admin_home.php">Civil Registry</a>
             </div>
-
             <ul>
                 <label style="color: aliceblue;">
                     <?php
@@ -85,26 +82,32 @@ include('services/user/session.php');
             <th>Proof</th>
 
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+        <?php
+        $sql = "SELECT * FROM birth_reg";
+        $result = mysqli_query($db, $sql);
+        if (mysqli_num_rows($result) > 0)
+            while ($row = mysqli_fetch_array($result)) {
+                echo "<tr>";
+                echo "<td>".$row['user_id']."</td>";
+                echo "<td>".$row['place_of_marriage']."</td>";
+                echo "<td>".$row['date_of_marriage']."</td>";
+                echo "<td>".$row['bride_name']."</td>";
+                echo "<td>".$row['bride_dob']."</td>";
+                echo "<td>".$row['bride_housename'].", ".$row['bride_city'].", ".$row['bride_district'].", ".$row['bride_state'].", ".$row['bride_country']."</td>";
+                echo "<td>".$row['bride_phno']."</td>";
+                echo "<td>".$row['bride_email']."</td>";
+                echo "<td>".$row['bride_photo']."</td>";
+                echo "<td>".$row['bride_groom_name']."</td>";
+                echo "<td>".$row['bride_groom_dob']."</td>";
+                echo "<td>".$row['bride_housename'].", ".$row['bride_city'].", ".$row['bride_district'].", ".$row['bride_state'].", ".$row['bride_country']."</td>";
+                echo "<td>".$row['bride_groom_phno']."</td>";
+                echo "<td>".$row['bride_groom_email']."</td>";
+                echo "<td>".$row['bride_groom_photo']."</td>";
+                echo "<td>".$row['proof']."</td>";
+                echo "</tr>";
+
+            }
+        ?>
     </table>
 </body>
 

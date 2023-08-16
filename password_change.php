@@ -1,6 +1,6 @@
 <html>
   <head>
-  <title>Civil Registry</title>
+    <title>Civil Registry</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
@@ -25,7 +25,7 @@
     <nav>
       <div class="menu">
         <div class="logo">
-        <a href="/home.php">Civil Registry</a>
+          <a href="/home.php">Civil Registry</a>
         </div>
       </div>
     </nav>
@@ -37,7 +37,7 @@
 
         <div style="width: 80%; margin: 10%">
           <form action="Change.php" method="post">
-            <label>Old Password :</label><input type="password" name="old_password" class="box" /><br /><br />
+            <label>Old Password :</label><input type="password" name="old_password" class="box" required /><br /><br />
             <div align="center"><input type="submit" value=" Verify " /> <button type="reset">Reset</button></div>
             <br /><br />
           </form>

@@ -84,26 +84,33 @@ include('services/user/session.php');
             <th>Actual Cause</th>
             <th>Death Document</th>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+        <?php
+        $sql = "SELECT * FROM birth_reg";
+        $result = mysqli_query($db, $sql);
+        if (mysqli_num_rows($result) > 0)
+            while ($row = mysqli_fetch_array($result)) {
+                echo "<tr>";
+                echo "<td>".$row['user_id']."</td>";
+                echo "<td>".$row['deceased_name']."</td>";
+                echo "<td>".$row['deceased_sex']."</td>";
+                echo "<td>".$row['deceased_age']."</td>";
+                echo "<td>".$row['deceased_housename']."</td>";
+                echo "<td>".$row['deceased_city']."</td>";
+                echo "<td>".$row['deceased_district']."</td>";
+                echo "<td>".$row['deceased_state']."</td>";
+                echo "<td>".$row['deceased_country']."</td>";
+                echo "<td>".$row['deceased_pin']."</td>";
+                echo "<td>".$row['date_of_death']."</td>";
+                echo "<td>".$row['father_name']."</td>";
+                echo "<td>".$row['mother_name']."</td>";
+                echo "<td>".$row['place_of_death']."</td>";
+                echo "<td>".$row['cause_certificate_id']."</td>";
+                echo "<td>".$row['actual_cause']."</td>";
+                echo "<td>".$row['death_document']."</td>";
+                echo "</tr>";
+
+            }
+        ?>
     </table>
 </body>
 

@@ -34,8 +34,8 @@
 
         <div style="width: 80%; margin: 10%">
           <form action="services/user/login.php" method="post">
-            <label>Username :</label><input type="text" name="email" class="box" /><br /><br />
-            <label>Password :</label><input type="password" name="password" class="box" /><br /><br />
+            <label>Username :</label><input type="text" name="email" class="box" required /><br /><br />
+            <label>Password :</label><input type="password" name="password" class="box" required /><br /><br />
             <div align="center"><input type="submit" value=" Submit " /><br /></div>
           </form>
           <div align="center"><a href="registration.php">New User? Register Now</a></div>

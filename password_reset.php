@@ -1,6 +1,6 @@
 <html>
   <head>
-  <title>Civil Registry</title>
+    <title>Civil Registry</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
@@ -25,7 +25,7 @@
     <nav>
       <div class="menu">
         <div class="logo">
-        <a href="/home.php">Civil Registry</a>
+          <a href="/home.php">Civil Registry</a>
         </div>
       </div>
     </nav>
@@ -37,13 +37,12 @@
 
         <div style="width: 80%; margin: 10%">
           <form action="services/user/reset_password.php" method="post">
-            <label>New Password :</label><input type="password" id="new_password" name="new_password" class="box" /><br /><br />
+            <label>New Password :</label><input type="password" id="new_password" name="new_password" class="box" required /><br /><br />
             <label>Confirm Password :</label
-            ><input type="password" id="confirm_password" name="confirm_password" onkeyup="checkPasswordMatch();" class="box" /><br /><br />
+            ><input type="password" id="confirm_password" name="confirm_password" onkeyup="checkPasswordMatch();" class="box" required /><br /><br />
             <?php
             $id=$_GET['id'];
-            echo "<input type=hidden value='$id' name='id'>"
-            ?>
+            echo "<input type=hidden value='$id' name='id'>" ?>
             <div align="center"><input type="submit" id="submit" value=" Submit " disabled /> <button type="reset">Reset</button></div>
             <br /><br />
           </form>

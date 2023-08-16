@@ -60,35 +60,35 @@
                     <div style="margin-right:20px ;">
                         
                               <label>User ID  :</label><input readonly type = "text" value = <?php echo $_SESSION['id'];?> name = "user_id" class = "box"/><br /><br/>
-                              <label>Date of Birth  :</label><input type = "date" name = "dob" class = "box" /><br/><br/>
-                              <label>Child Name :</label><input type = "text" name = "child_name" class = "box" /><br/><br/>
-                              <label>Child Sex :<input type="radio" id="male" name="child_sex" value="M">
+                              <label>Date of Birth  :</label><input type = "date" name = "dob" class = "box" required /><br/><br/>
+                              <label>Child Name :</label><input type = "text" name = "child_name" class = "box" required /><br/><br/>
+                              <label>Child Sex :<input type="radio" id="male" name="child_sex" value="M" required>
                                  <label for="male">Male</label>
-                                 <input type="radio" id="female" name="child_sex" value="F">
+                                 <input type="radio" id="female" name="child_sex" value="F" required>
                                  <label for="female">Female</label><br><br>
             
             
-                                 <label>Place of Birth  :</label><input type = "text" name = "place_of_birth" class = "box" /><br/><br/>
-                                 <label>Birth Weight  :</label><input type = "number"  min="0.1" max="11" step=".1" name = "birth_weight" class = "box"  /><br/><br/>
-                                 <label>Mother's Name :</label><input type = "text" name = "mother_name" class = "box" /><br/><br/>
-                                 <label>Mother's Age :</label><input type = "number" min="14" max="100" name = "mother_age" class = "box" /><br/><br/><br>
+                                 <label>Place of Birth  :</label><input type = "text" name = "place_of_birth" class = "box" required /><br/><br/>
+                                 <label>Birth Weight  :</label><input type = "number"  min="0.1" max="11" step=".1" name = "birth_weight" class = "box" required  /><br/><br/>
+                                 <label>Mother's Name :</label><input type = "text" name = "mother_name" class = "box" required /><br/><br/>
+                                 <label>Mother's Age :</label><input type = "number" min="14" max="100" name = "mother_age" class = "box" required /><br/><br/><br>
                                  <div align = "center"><input type = "submit" value = " Submit " /></div><br><br>
                           
                     </div>
                         
                           <div style="margin-left: 70px;">
-                                 <label>Father's Name :</label><input type = "text" name = "father_name" class = "box" /><br/><br/>
-                                 <label>Father's Age :</label><input type = "number" min="14" max="100" name = "father_age" class = "box" /><br/><br/>
-                                 <label>Birth Housename :</label><input type = "text" name = "birth_housename" class = "box" /><br/><br/>
-                                 <label>Birth City:</label><input type = "text" name = "birth_city" class = "box" /><br/><br/>
-                                 <label>Birth District:</label><input type = "text" name = "birth_district" class = "box" /><br/><br/>
-                                 <label>Birth State:</label><input type = "text" name = "birth_state" class = "box" /><br/><br/>
-                                 <label>Delivery Method:</label><select name="delivery_method">
+                                 <label>Father's Name :</label><input type = "text" name = "father_name" class = "box" required /><br/><br/>
+                                 <label>Father's Age :</label><input type = "number" min="14" max="100" name = "father_age" class = "box" required /><br/><br/>
+                                 <label>Birth Housename :</label><input type = "text" name = "birth_housename" class = "box" required /><br/><br/>
+                                 <label>Birth City:</label><input type = "text" name = "birth_city" class = "box" required /><br/><br/>
+                                 <label>Birth District:</label><input type = "text" name = "birth_district" class = "box" required /><br/><br/>
+                                 <label>Birth State:</label><input type = "text" name = "birth_state" class = "box" required /><br/><br/>
+                                 <label>Delivery Method:</label><select name="delivery_method" required>
                                     <option value="" disabled selected hidden>Choose Delivery Method </option>
                                     <option value="Natural">Natural </option>
                                     <option value="C-Section">C-Section </option>
                                   </select><br /><br/>
-                                 <label>Birth Proof</label><input type="file" name="birth_proof"><br><br><br>
+                                 <label>Birth Proof</label><input type="file" name="birth_proof" required><br><br><br>
                                  <div align = "center"> <button type="reset">Reset</button></div><br><br>
         
                           </div>

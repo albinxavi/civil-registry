@@ -25,7 +25,7 @@
     <nav>
       <div class="menu">
         <div class="logo">
-        <a href="/home.php">Civil Registry</a>
+          <a href="/home.php">Civil Registry</a>
         </div>
       </div>
     </nav>
@@ -37,15 +37,15 @@
 
         <div style="width: 80%; margin: 10%">
           <form action="services/user/register.php" method="post">
-            <label>Email :</label><input type="text" name="email" class="box" /><br /><br />
-            <label>Name :</label><input type="text" name="name" class="box" /><br /><br />
-            <label>Phone Number :</label><input type="text" name="phone" class="box" /><br /><br />
+            <label>Email :</label><input type="text" name="email" class="box" required /><br /><br />
+            <label>Name :</label><input type="text" name="name" class="box" required /><br /><br />
+            <label>Phone Number :</label><input type="text" name="phone" class="box" required /><br /><br />
 
-            <label>Password :</label><input type="password" id="password" name="password" class="box" /><br /><br />
+            <label>Password :</label><input type="password" id="password" name="password" class="box" required /><br /><br />
             <label>Confirm Password :</label
-            ><input type="password" id="confirm_password" name="confirm_password" class="box" onkeyup="checkPasswordMatch();" /><br /><br />
+            ><input type="password" id="confirm_password" name="confirm_password" class="box" required onkeyup="checkPasswordMatch();" /><br /><br />
             <label>Security Question :</label
-            ><select name="security_qn">
+            ><select name="security_qn" required>
               <option value="" disabled selected hidden>Choose Security Question</option>
               <option value="What was your favorite sport in high school?">What was your favorite sport in high school?</option>
               <option value="What was the name of your first childhood friend?">What was the name of your first childhood friend?</option>
@@ -53,7 +53,7 @@
               <option value="Which teacher did you like the most at school?">Which teacher did you like the most at school?</option>
               <option value="What sport do you prefer the most?">What sport do you prefer the most?</option></select
             ><br /><br />
-            <label>Answer :</label><input type="text" name="security_answer" class="box" /><br /><br />
+            <label>Answer :</label><input type="text" name="security_answer" class="box" required /><br /><br />
 
             <div align="center"><input type="submit" id="submit" value=" Submit " disabled /> <button type="reset">Reset</button></div>
             <br /><br />
