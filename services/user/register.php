@@ -7,7 +7,7 @@
       $email = mysqli_real_escape_string($db,$_POST['email']);
       $password = mysqli_real_escape_string($db,$_POST['password']);
       $name = mysqli_real_escape_string($db,$_POST['name']);
-      $phone = mysqli_real_escape_string($db,$_POST['password']);
+      $phone = mysqli_real_escape_string($db,$_POST['phone']);
       $security_question = mysqli_real_escape_string($db,$_POST['security_qn']);
       $security_answer = mysqli_real_escape_string($db,$_POST['security_answer']);
 
