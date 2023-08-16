@@ -13,7 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bride_city = mysqli_real_escape_string($db, $_POST['bride_city']);
     $bride_district = mysqli_real_escape_string($db, $_POST['bride_district']);
     $bride_state = mysqli_real_escape_string($db, $_POST['bride_state']);
-    $bride_country = mysqli_real_escape_string($db, $_POST['bride_country']);
     $bride_phno = mysqli_real_escape_string($db, $_POST['bride_phno']);
     $bride_email = mysqli_real_escape_string($db, $_POST['bride_email']);
 
@@ -23,7 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bride_groom_city = mysqli_real_escape_string($db, $_POST['bride_groom_city']);
     $bride_groom_district = mysqli_real_escape_string($db, $_POST['bride_groom_district']);
     $bride_groom_state = mysqli_real_escape_string($db, $_POST['bride_groom_state']);
-    $bride_groom_country = mysqli_real_escape_string($db, $_POST['bride_groom_country']);
     $bride_groom_phno = mysqli_real_escape_string($db, $_POST['bride_groom_phno']);
     $bride_groom_email = mysqli_real_escape_string($db, $_POST['bride_groom_email']);
 
@@ -69,7 +67,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         bride_city, 
         bride_district, 
         bride_state, 
-        bride_country, 
         bride_phno, 
         bride_email,
         bride_signature,
@@ -80,7 +77,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         bride_groom_city, 
         bride_groom_district, 
         bride_groom_state, 
-        bride_groom_country, 
         bride_groom_phno, 
         bride_groom_email,
         bride_groom_signature,
@@ -95,7 +91,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         '$bride_city', 
         '$bride_district', 
         '$bride_state', 
-        '$bride_country', 
         '$bride_phno', 
         '$bride_email',
         '$bride_signature_web_location',
@@ -106,7 +101,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         '$bride_groom_city', 
         '$bride_groom_district', 
         '$bride_groom_state', 
-        '$bride_groom_country', 
         '$bride_groom_phno', 
         '$bride_groom_email',
         '$bride_groom_signature_web_location',

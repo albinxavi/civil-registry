@@ -5,7 +5,7 @@
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       
       $user_id = mysqli_real_escape_string($db,$_POST['user_id']);
-      $dob = mysqli_real_escape_string($db,$_POST['dob']);
+      $dob = mysqli_real_escape_string($db,$_POST['date_of_birth']);
       $child_name = mysqli_real_escape_string($db,$_POST['child_name']);
       $child_sex = mysqli_real_escape_string($db,$_POST['child_sex']);
       $place_of_birth = mysqli_real_escape_string($db,$_POST['place_of_birth']);

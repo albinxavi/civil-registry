@@ -12,10 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $deceased_city = mysqli_real_escape_string($db, $_POST['deceased_city']);
     $deceased_district = mysqli_real_escape_string($db, $_POST['deceased_district']);
     $deceased_state = mysqli_real_escape_string($db, $_POST['deceased_state']);
-    $deceased_country = mysqli_real_escape_string($db, $_POST['deceased_country']);
     $deceased_pin = mysqli_real_escape_string($db, $_POST['deceased_pin']);
     $father_name = mysqli_real_escape_string($db, $_POST['father_name']);
     $mother_name = mysqli_real_escape_string($db, $_POST['mother_name']);
+    $date_of_death = mysqli_real_escape_string($db, $_POST['date_of_death']);
     $place_of_death = mysqli_real_escape_string($db, $_POST['place_of_death']);
     $cause_certificate_id = mysqli_real_escape_string($db, $_POST['cause_certificate_id']);
     $actual_cause = mysqli_real_escape_string($db, $_POST['actual_cause']);
@@ -35,11 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         deceased_city, 
         deceased_district, 
         deceased_state, 
-        deceased_country, 
         deceased_pin, 
         dod, 
         father_name, 
         mother_name, 
+        date_of_death,
         place_of_death, 
         cause_certificate_id, 
         actual_cause, 
@@ -53,11 +53,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         '$deceased_city', 
         '$deceased_district', 
         '$deceased_state', 
-        '$deceased_country', 
         '$deceased_pin', 
         '$dod', 
         '$father_name', 
         '$mother_name', 
+        '$date_of_death', 
         '$place_of_death', 
         '$cause_certificate_id', 
         '$actual_cause', 

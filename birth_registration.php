@@ -60,7 +60,7 @@
                     <div style="margin-right:20px ;">
                         
                               <label>User ID  :</label><input readonly type = "text" value = <?php echo $_SESSION['id'];?> name = "user_id" class = "box"/><br /><br/>
-                              <label>Date of Birth  :</label><input type = "date" name = "dob" class = "box" required /><br/><br/>
+                              <label>Date of Birth  :</label><input type = "date" name = "date_of_birth" class = "box" required /><br/><br/>
                               <label>Child Name :</label><input type = "text" name = "child_name" class = "box" required /><br/><br/>
                               <label>Child Sex :<input type="radio" id="male" name="child_sex" value="M" required>
                                  <label for="male">Male</label>

@@ -85,11 +85,11 @@ include('services/user/session.php');
                   </div>
 
                   <div style="margin-left: 30px;">
-                     <label>Deceased Country:</label><input type="text" name="deceased_country"
                         class="box" required/><br /><br />
                      <label>Deceased Pin:</label><input type="text" name="deceased_pin" class="box" required/><br /><br />
                      <label>Father's Name :</label><input type="text" name="father_name" class="box" required/><br /><br />
                      <label>Mother's Name :</label><input type="text" name="mother_name" class="box" required/><br /><br />
+                     <label>Date of Death  :</label><input type = "date" name = "date_of_death" class = "box" required /><br/><br/>
                      <label>Place of Death :</label><input type="text" name="place_of_death" class="box" required/><br /><br />
                      <label>Cause Certificate ID :</label><input type="text" name="cause_certificate_id"
                         class="box" required/><br /><br />
