@@ -34,7 +34,7 @@ include('services/user/session.php');
           <div style="font-size: 20px; color: black; margin-top: 10px">
           <?php
 
-            if((array_key_exists("register_death",$_GET)&&$_GET['register_birth']=="success")||(array_key_exists("register_marriage",$_GET)&&$_GET['register_death']=="success")||(array_key_exists("register_death",$_GET)&&$_GET['register_death']=="success"))
+            if((array_key_exists("register_birth",$_GET)&&$_GET['register_birth']=="success")||(array_key_exists("register_marriage",$_GET)&&$_GET['register_marriage']=="success")||(array_key_exists("register_death",$_GET)&&$_GET['register_death']=="success"))
             {
               echo "Registration Successful. ";
             }

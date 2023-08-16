@@ -113,7 +113,7 @@ nav .menu {
   color: rgb(255, 255, 255);
 }
 
-.user-name {
+#user-name {
   color: aliceblue;
   font-size: larger;
 }
