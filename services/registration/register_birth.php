@@ -31,7 +31,7 @@
          $args = array(
             'register_birth' => 'success'
         );
-        header("Location: /home.php?" . http_build_query($args));
+        header("Location: /message.php?" . http_build_query($args));
       }else {
         $args = array(
          'register_birth' => 'failed'
