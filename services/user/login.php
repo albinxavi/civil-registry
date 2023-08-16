@@ -18,9 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $_SESSION['admin'] = $row['admin'];
       $_SESSION['id'] = $row['id'];
       $_SESSION['name'] = $row['name'];
-      if ($_SESSION['id'] == 0) {
+      if ($_SESSION['admin'] == 0) {
          header("location: /home.php");
-      } elseif ($_SESSION['id'] == 1) {
+      } elseif ($_SESSION['admin'] == 1) {
          header("location: /admin_home.php");
       }
    } else {

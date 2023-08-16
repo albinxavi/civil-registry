@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $args = array(
             'register_marriage' => 'success'
         );
-        header("Location: /home.php?" . http_build_query($args));
+        header("Location: /message.php?" . http_build_query($args));
     } else {
         $args = array(
             'register_marriage' => 'failed'
