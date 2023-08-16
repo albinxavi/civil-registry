@@ -31,10 +31,10 @@ include('services/user/session.php');
     <div align="center">
 
 
-          <div style="font-size: 20px; color: #00000; margin-top: 10px">
+          <div style="font-size: 20px; color: black; margin-top: 10px">
           <?php
 
-            if((array_key_exists("register_death",$_GET)&&$_GET['register_death']=="success")||(array_key_exists("register_death",$_GET)&&$_GET['register_death']=="success")||(array_key_exists("register_death",$_GET)&&$_GET['register_death']=="success"))
+            if((array_key_exists("register_death",$_GET)&&$_GET['register_birth']=="success")||(array_key_exists("register_marriage",$_GET)&&$_GET['register_death']=="success")||(array_key_exists("register_death",$_GET)&&$_GET['register_death']=="success"))
             {
               echo "Registration Successful. ";
             }
@@ -42,7 +42,7 @@ include('services/user/session.php');
             echo "Uh. Oh! Looks Like You are Lost. ";
           }
           ?>
-          Redirecting in <span id="timer">3</span> seconds.
+          Redirecting in <span id="timer">5</span> seconds.
           </div>
         </div>
       </div>
@@ -55,6 +55,6 @@ include('services/user/session.php');
     }
     const element = document.getElementById("timer");
     setInterval(function() {element.innerHTML = parseInt(element.innerHTML)-1}, 1000);
-    setTimeout('Redirect()', 3000);
+    setTimeout('Redirect()', 5000);
     </script>
 </html>
