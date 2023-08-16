@@ -22,11 +22,10 @@ include('services/user/session.php');
 
          <ul>
             <span style="color: aliceblue;font-weight: 500;font-size: 18px;font-family: 'Poppins', sans-serif;">
-
-            <?php
+               <?php
                   echo $_SESSION['name'];
                ?>
-                           </span>
+            </span>
             <li><a href="services/user/logout.php">Logout</a></li>
             <li><a href="password_change.php">Change password</a></li>
          </ul>

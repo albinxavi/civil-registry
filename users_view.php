@@ -42,11 +42,12 @@ include('services/user/session.php');
         </div>
 
         <ul>
-          <label style="color: aliceblue">
-            <?php
+            <span style="color: aliceblue;font-weight: 500;font-size: 18px;font-family: 'Poppins', sans-serif;">
+                <?php
                     if ($_SESSION['admin'] == 1) {
-                        echo $_SESSION['name']."<br>(Admin)"; } else { echo $_SESSION['name']; } ?>
-          </label>
+                        echo $_SESSION['name']."<br>(Admin)"; } else { echo $_SESSION['name']; } 
+                ?>
+            </span>
           <li><a href="services/user/logout.php">Logout</a></li>
         </ul>
       </div>
@@ -54,7 +55,7 @@ include('services/user/session.php');
     <br /><br /><br /><br /><br /><br />
 
     <center>
-      <h2 style="text-decoration: underline">DEATH REGISTRATION DETAILS</h2>
+      <h2 style="text-decoration: underline">USER DETAILS</h2>
     </center>
     <br />
     <br />

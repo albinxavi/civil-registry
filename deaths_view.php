@@ -46,7 +46,7 @@ include('services/user/session.php');
             </div>
 
             <ul>
-                <label style="color: aliceblue;">
+                <span style="color: aliceblue;font-weight: 500;font-size: 18px;font-family: 'Poppins', sans-serif;">
                     <?php
                     if ($_SESSION['admin'] == 1) {
                         echo $_SESSION['name']."<br>(Admin)";
@@ -54,7 +54,7 @@ include('services/user/session.php');
                         echo $_SESSION['name'];
                     }
                     ?>
-                </label>
+                </span>
                 <li><a href="services/user/logout.php">Logout</a></li>
             </ul>
         </div>
