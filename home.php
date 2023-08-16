@@ -21,7 +21,7 @@ include('services/user/session.php');
          </div>
 
          <ul>
-            <label style="color: aliceblue;">
+            <label class="user-name">
                <?php
                   echo $_SESSION['name'];
                ?>
