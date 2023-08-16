@@ -85,8 +85,6 @@ include('services/user/session.php');
                   </div>
 
                   <div style="margin-left: 30px;">
-                     <label>Deceased Country:</label><input type="text" name="deceased_country" class="box"
-                        required /><br /><br />
                      <label>Deceased Pin:</label><input type="text" name="deceased_pin" class="box"
                         required /><br /><br />
                      <label>Father's Name:</label><input type="text" name="father_name" class="box"

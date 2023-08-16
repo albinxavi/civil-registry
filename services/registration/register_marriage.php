@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $user_id = mysqli_real_escape_string($db, $_POST['user_id']);
     $date_of_marriage = mysqli_real_escape_string($db, $_POST['date_of_marriage']);
+    $place_of_marriage = mysqli_real_escape_string($db, $_POST['place_of_marriage']);
 
     $bride_name = mysqli_real_escape_string($db, $_POST['bride_name']);
     $bride_dob = mysqli_real_escape_string($db, $_POST['bride_dob']);
@@ -60,7 +61,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $sql = "INSERT INTO marriage_reg (
         user_id,
-        date_of_marriage, 
+        date_of_marriage,
+        place_of_marriage, 
         bride_name, 
         bride_dob, 
         bride_housename, 
@@ -85,6 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ) VALUES (
         '$user_id', 
         '$date_of_marriage', 
+        '$place_of_marriage',
         '$bride_name', 
         '$bride_dob', 
         '$bride_housename', 
