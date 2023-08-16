@@ -1,3 +1,6 @@
+<?php
+include('services/user/session.php');
+?>
 <html>
   <head>
     <title>Civil Registry</title>

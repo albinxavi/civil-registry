@@ -1,5 +1,5 @@
 <?php
-   include($_SERVER['DOCUMENT_ROOT']."/inc/config.php");
+   include('session.php');
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       $id = mysqli_real_escape_string($db,$_POST['id']);
@@ -10,6 +10,7 @@
          $args = array(
             'reset' => 'success'
         );
+        session_destroy();
         header("Location: /?" . http_build_query($args));
       }else {
         $args = array(
