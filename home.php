@@ -27,10 +27,10 @@ include('services/user/session.php');
                ?>
             </label>
             <li><a href="services/user/logout.php">Logout</a></li>
+            <li><a href="registration.php">Change password</a></li>
          </ul>
       </div>
    </nav>
-   <div class="img"></div>
    <div class="center">
       <div class="title">Services</div>
       <div class="btns">
