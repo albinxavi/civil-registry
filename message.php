@@ -33,11 +33,12 @@ include('services/user/session.php');
 
           <div style="font-size: 20px; color: #00000; margin-top: 10px">
           <?php
-          if($_GET['register_marriage']=='success'||$_GET['register_death']=='success'||$_GET['register_birth']=='success')
-          {
-            echo "Registration Successful. ";
-          }
-          else{
+
+            if((array_key_exists("register_death",$_GET)&&$_GET['register_death']=="success")||(array_key_exists("register_death",$_GET)&&$_GET['register_death']=="success")||(array_key_exists("register_death",$_GET)&&$_GET['register_death']=="success"))
+            {
+              echo "Registration Successful. ";
+            }
+            else{
             echo "Uh. Oh! Looks Like You are Lost. ";
           }
           ?>
