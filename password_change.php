@@ -45,7 +45,7 @@
           <div style="font-size: 11px; color: #cc0000; margin-top: 10px">
           <?php
                if (isset($_GET['change_password'])){
-               if($_GET['forgot_password']=='failed'){
+               if($_GET['change_password']=='failed'){
                 echo "The password entered is incorrect. Please Try Again.";
                }
 
