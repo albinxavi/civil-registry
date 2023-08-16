@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         '$deceased_district', 
         '$deceased_state', 
         '$deceased_pin', 
-        '$dod', 
+        '$date_of_death', 
         '$father_name', 
         '$mother_name', 
         '$date_of_death', 

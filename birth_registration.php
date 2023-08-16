@@ -27,7 +27,7 @@
    
    <body bgcolor = "#FFFFFF">
    <nav>
-   <div class="menu">
+      <div class="menu">
          <div class="logo">
             <a href="/home.php">Civil Registry</a>
          </div>
@@ -44,8 +44,8 @@
             </label>
             <li><a href="services/user/logout.php">Logout</a></li>
          </ul>
-      </nav><br><br><br><br><br>
       </div>
+      </nav><br><br><br><br><br>
       <div align = "center">
          <div style = "width:800px; height: 650px; border: solid 1px #333333; " align = "left">
             <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Birth Registration</b></div>
