@@ -36,13 +36,22 @@
         <div style="background-color: #333333; color: #ffffff; padding: 3px"><b>Change Password</b></div>
 
         <div style="width: 80%; margin: 10%">
-          <form action="Change.php" method="post">
+          <form action="services/user/change_password.php" method="post">
             <label>Old Password :</label><input type="password" name="old_password" class="box" required /><br /><br />
             <div align="center"><input type="submit" value=" Verify " /> <button type="reset">Reset</button></div>
             <br /><br />
           </form>
 
-          <div style="font-size: 11px; color: #cc0000; margin-top: 10px"></div>
+          <div style="font-size: 11px; color: #cc0000; margin-top: 10px">
+          <?php
+               if (isset($_GET['change_password'])){
+               if($_GET['forgot_password']=='failed'){
+                echo "The password entered is incorrect. Please Try Again.";
+               }
+
+               }
+               ?>
+        </div>
         </div>
       </div>
     </div>
