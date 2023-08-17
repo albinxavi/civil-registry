@@ -96,14 +96,14 @@ include('services/user/session.php');
                 echo "<td>".$row['bride_housename'].", ".$row['bride_city'].", ".$row['bride_district'].", ".$row['bride_state']."</td>";
                 echo "<td>".$row['bride_phno']."</td>";
                 echo "<td>".$row['bride_email']."</td>";
-                echo "<td><a href='".$row['bride_photo']."'>Download</a></td>";
+                echo "<td><button><a target='_blank' style='text-decoration:none;' href='".$row['bride_photo']."' download>Download</a></button></td>";
                 echo "<td>".$row['bride_groom_name']."</td>";
                 echo "<td>".$row['bride_groom_dob']."</td>";
                 echo "<td>".$row['bride_housename'].", ".$row['bride_city'].", ".$row['bride_district'].", ".$row['bride_state']."</td>";
                 echo "<td>".$row['bride_groom_phno']."</td>";
                 echo "<td>".$row['bride_groom_email']."</td>";
-                echo "<td><a href='".$row['bride_groom_photo']."'>Download</a></td>";
-                echo "<td><a href='".$row['proof']."'>Download</a></td>";
+                echo "<td><button><a target='_blank' style='text-decoration:none;' href='".$row['bride_groom_photo']."' download>Download</a></button></td>";
+                echo "<td><button><a target='_blank' style='text-decoration:none;' href='".$row['proof']."' download>Download</a></button></td>";
                 echo "</tr>";
 
             }

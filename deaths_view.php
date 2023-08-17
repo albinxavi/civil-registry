@@ -105,7 +105,7 @@ include('services/user/session.php');
                 echo "<td>".$row['place_of_death']."</td>";
                 echo "<td>".$row['cause_certificate_id']."</td>";
                 echo "<td>".$row['actual_cause']."</td>";
-                echo "<td><a href='".$row['death_document']."'>Download</a></td>";
+                echo "<td><button><a target='_blank' style='text-decoration:none;' href='".$row['death_document']."' download>Download</a></button></td>";
                 echo "</tr>";
 
             }
