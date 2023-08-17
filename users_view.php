@@ -63,43 +63,24 @@ include('services/user/session.php');
     <table>
       <tr>
         <th>User ID</th>
-        <th>Deceased Name</th>
-        <th>Deceased Sex</th>
-        <th>Deceased Age</th>
-        <th>Deceased Housename</th>
-        <th>Deceased City</th>
-        <th>Deceased District</th>
-        <th>Deceased State</th>
-        <th>Deceased Country</th>
-        <th>Deceased Pin</th>
-        <th>Date of Death</th>
-        <th>Father's Name</th>
-        <th>Mother's Name</th>
-        <th>Place of Death</th>
-        <th>Cause Certificate ID</th>
-        <th>Actual Cause</th>
-        <th>Death Document</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
       </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
+      <?php
+      $sql = "SELECT * FROM user";
+      $result = mysqli_query($db, $sql);
+      if (mysqli_num_rows($result) > 0)
+          while ($row = mysqli_fetch_array($result)) {
+              echo "<tr>";
+              echo "<td>".$row['id']."</td>";
+              echo "<td>".$row['name']."</td>";
+              echo "<td>".$row['email']."</td>";
+              echo "<td>".$row['phone']."</td>";
+              echo "</tr>";
+
+          }
+      ?>
     </table>
   </body>
 </html>
