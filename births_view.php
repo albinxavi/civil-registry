@@ -104,7 +104,7 @@ include('services/user/session.php');
                 echo "<td>".$row['birth_district']."</td>";
                 echo "<td>".$row['birth_state']."</td>";
                 echo "<td>".$row['delivery_method']."</td>";
-                echo "<td>".$row['birth_proof']."</td>";
+                echo "<td><a href='".$row['birth_proof']."'>Download</a></td>";
                 echo "</tr>";
 
             }

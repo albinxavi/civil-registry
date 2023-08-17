@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bride_groom_photo_file_name = $_FILES['bride_groom_photo']['name'];
     $t = time();
     $bride_groom_photo_target_file = $target_dir . $t . "_bride_groom_photo_" . $bride_groom_photo_file_name;
-    $bride_groom_signature_web_location = $base_dir . $t . "_bride_groom_photo_" . $bride_groom_photo_file_name;
+    $bride_groom_photo_web_location = $base_dir . $t . "_bride_groom_photo_" . $bride_groom_photo_file_name;
     move_uploaded_file($_FILES['bride_groom_photo']['tmp_name'], $bride_groom_photo_target_file);
 
     $proof_file_name = $_FILES['proof']['name'];
