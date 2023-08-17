@@ -85,7 +85,7 @@ include('services/user/session.php');
             <th>Death Document</th>
         </tr>
         <?php
-        $sql = "SELECT * FROM birth_reg";
+        $sql = "SELECT * FROM death_reg";
         $result = mysqli_query($db, $sql);
         if (mysqli_num_rows($result) > 0)
             while ($row = mysqli_fetch_array($result)) {

@@ -90,7 +90,7 @@ include('services/user/session.php');
             while ($row = mysqli_fetch_array($result)) {
                 echo "<tr>";
                 echo "<td>".$row['user_id']."</td>";
-                echo "<td>".$row['dob']."</td>";
+                echo "<td>".$row['date_of_birth']."</td>";
                 echo "<td>".$row['child_name']."</td>";
                 echo "<td>".$row['child_sex']."</td>";
                 echo "<td>".$row['place_of_birth']."</td>";
