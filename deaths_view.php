@@ -74,7 +74,6 @@ include('services/user/session.php');
             <th>Deceased City</th>
             <th>Deceased District</th>
             <th>Deceased State</th>
-            <th>Deceased Country</th>
             <th>Deceased Pin</th>
             <th>Date of Death</th>
             <th>Father's Name</th>
@@ -98,7 +97,6 @@ include('services/user/session.php');
                 echo "<td>".$row['deceased_city']."</td>";
                 echo "<td>".$row['deceased_district']."</td>";
                 echo "<td>".$row['deceased_state']."</td>";
-                echo "<td>".$row['deceased_country']."</td>";
                 echo "<td>".$row['deceased_pin']."</td>";
                 echo "<td>".$row['date_of_death']."</td>";
                 echo "<td>".$row['father_name']."</td>";

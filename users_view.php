@@ -3,7 +3,7 @@ include('services/user/session.php');
 ?>
 <html>
   <head>
-    <title>Death Registration Details</title>
+    <title>Civil Registry</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <style type="text/css">
