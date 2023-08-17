@@ -64,6 +64,7 @@ include('services/user/session.php');
         <h2 style="text-decoration: underline;">DEATH REGISTRATION DETAILS</h2>
     </center> <br> <br>
 
+
     <table>
         <tr>
             <th>User ID</th>
@@ -111,5 +112,33 @@ include('services/user/session.php');
         ?>
     </table>
 </body>
+<div id="graph_div" ></div>
+<script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          [
+            "Signal",
+            "95% risk",
+            "99% risk",
+            "Average 95% risk",
+            "Average 99% risk",
+          ]].concat({{ chart|tojson|safe }}));
+
+        var options = {
+          title: "Risk Analysis Result",
+          curveType: "function",
+          legend: { position: "bottom" },
+        };
+
+        var chart = new google.visualization.LineChart(
+          document.getElementById("graph_div")
+        );
+
+        chart.draw(data, options);
+      }
+    </script>
 
 </html>
