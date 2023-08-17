@@ -39,10 +39,10 @@ include('services/user/session.php');
    <div class="center">
       <div class="title">Services</div>
       <div class="btns">
-         <a href="marriages_view.php" style="text-decoration:none;"><button>Marriage Registration</button></a>
-         <a href="births_view.php" style="text-decoration:none;"><button>Birth Registration</button></a>
-         <a href="deaths_view.php" style="text-decoration:none;"><button>Death Registration</button></a>
-         <a href="users_view.php" style="text-decoration:none;"><button>User Registration</button></a>
+         <a href="marriages_view.php" style="text-decoration:none;"><button>Marriage Registrations</button></a>
+         <a href="births_view.php" style="text-decoration:none;"><button>Birth Registrations</button></a>
+         <a href="deaths_view.php" style="text-decoration:none;"><button>Death Registrations</button></a>
+         <a href="users_view.php" style="text-decoration:none;"><button>User Registrations</button></a>
       </div>
    </div>
 </body>
